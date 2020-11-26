@@ -1,7 +1,11 @@
 import timeit
 
 def lpf(N):
-    for i in range(2,N):
+    while N % 2 == 0:
+        N = N/2
+    if 2 > N:
+        return 2
+    for i in range(3,N,2):
         while N % i == 0:
             N = N/i
         if i > N:
